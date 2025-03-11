@@ -1,9 +1,13 @@
 pipeline {
     agent any
 
-	tools {
-		jdk 'jdk11'
-	}
+//	tools {
+//		jdk 'jdk11'
+//	}
+        environment {
+            JAVA_HOME = '/home/ubuntu/jdk-11.0.26+4-linux-x64'
+            PATH = "${JAVA_HOME}/bin:${env.PATH}"
+        }
 
 //	environment {
 //		M2_INSTALL = "/usr/bin/mvn"
